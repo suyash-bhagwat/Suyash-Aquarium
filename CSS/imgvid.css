@@ -1,0 +1,11 @@
+body {
+    background-image: url("Flowerhorn2.jpg");
+    background-size: cover;
+    background-color: rgb(120, 134, 92);
+    background-blend-mode: soft-light;
+   }
+.images {
+    height: 230px;
+    width: 330px; 
+    padding-right: 20px;
+}

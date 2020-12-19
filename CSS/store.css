@@ -1,0 +1,113 @@
+body {
+    background-image: url("1.jpg");
+    background-size: cover;
+   }
+h1{ display: block;
+    text-align: center;
+    font-size: 400%;
+    color:rgb(255, 239, 8);
+    font-family: 'Domine', serif;
+    font-family: 'Playfair Display', serif;
+}
+.nav li{
+    display: inline; 
+    
+}
+
+.nav a{
+   
+    padding: 4em;
+    color:rgb(61, 255, 255);
+    text-decoration: none;
+    font-size: 150%;
+    font-family: 'Red Rose', cursive;
+}
+.nav-ul{
+    size: 20px;
+}
+
+.liheader {
+    text-align: right;
+    font-size: 20px;
+    display: inline;
+    color:rgb(61, 255, 255);
+}
+.logos {
+    text-align: end;
+    block-size: auto;
+}
+
+
+header{
+    display: inline;
+    padding-top: 50px;
+}
+.logos img{
+    border-radius:70%;
+}
+
+.register{
+    color:rgb(61, 255, 255);
+    text-decoration: none;
+    font-size: 150%;
+    
+  }
+
+
+.reg{
+    display: inline;
+    display: block;
+    float: right;
+    margin-right: 30px;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    opacity: 70%;
+    font-size: 16px;
+}
+
+button:hover {
+    color: red;
+}
+
+th, td { 
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(11, 252, 160);
+    border: 2px solid rgb(255, 239, 11) ;
+  }
+
+td,th{
+    width: 100px;
+    height: 50px;
+}
+
+.table1{
+    float: left;
+    padding-right: 20px;
+}
+
+.table2{
+    width: 50%;
+    float: right;
+}
+.list a{
+    font-size: 1.9em;
+    color:rgb(0, 255, 55);
+    text-decoration: none;
+    font-family: 'Sansita Swashed', cursive;
+}   
+.list a:hover{
+    color:rgb(250, 123, 4);
+}
+h2{ 
+    color:rgb(127, 253, 253);
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 35px;
+    text-align: center;
+}
+.product-list{
+    text-align: center;
+}

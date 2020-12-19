@@ -1,0 +1,45 @@
+
+table {
+    background-color: rgb(215, 235, 177);
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+
+.register {
+    height: 400px;
+    width: 350px;
+    text-align: center;
+}
+
+.images {
+    height: 230px;
+    width: 330px; 
+    padding-right: 20px;
+}
+
+div {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.between {
+    height: 250px;
+    width: 300px;
+    text-align: center;
+    
+}
+
+.between button{
+    height: 50px;
+    width: 120px;
+}
+
+button:hover {
+    color: red;
+}
+
+
+.table1 td,th{
+    text-align: center;
+}

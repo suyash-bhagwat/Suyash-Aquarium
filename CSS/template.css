@@ -1,0 +1,38 @@
+body {
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-color: rgb(120, 134, 92);
+    background-blend-mode: soft-light;
+   }
+
+table{width: 500px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 520px;
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 230, 250);
+    background-blend-mode: soft-light;
+}
+th {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+img{
+    width: 250px;
+    height: 400px;
+}
+td{
+    padding-left: 10px;
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
+    margin-left: 35px;
+}
+button:hover{
+    background-color: rgb(221, 220, 220);
+    color: red;
+}

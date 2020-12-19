@@ -1,0 +1,75 @@
+body {
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-color: rgb(120, 134, 92);
+    background-blend-mode: soft-light;
+   }
+
+table {
+    background-color: rgb(215, 235, 177);
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+table th{
+    font-size: 1.5em;
+}
+
+.table1 td,th{
+    text-align: center;
+}
+
+td{
+    font-size: 20px;
+}
+h1{ display: block;
+    text-align: center;
+    font-size: 400%;
+    color:rgb(255, 239, 8);
+    font-family: 'Domine', serif;
+    font-family: 'Playfair Display', serif;
+}
+button:hover {
+    color: red;
+}
+
+.table1 button{
+    height: 35px;
+    width: 90px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.add {
+    height: 375px;
+    width: 320px;
+    text-align: center;
+}
+
+.add button{
+    font-size: 1.1em;
+    height: 30px;
+    width: 80px;
+}
+table th{
+    font-size: 1.5em;
+}
+
+.login {
+    height: 250px;
+    width: 300px;
+    text-align: center;
+}
+
+.login a{
+    text-decoration: none;
+    width: auto;
+}
+
+.register {
+    height: 400px;
+    width: 350px;
+    text-align: center;
+}
+
