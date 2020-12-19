@@ -25,27 +25,6 @@ address{
     text-align: center;
     color: turquoise;
 }
-.nav{
-
-    top: 0;
-    border-bottom: 1px white;
-    border-style: solid;
-    width: 100%;
-}
-.nav li{
-    display: inline; 
-}
-
-.nav a{
-   
-    padding: 4em;
-    color:rgb(61, 255, 255);
-    text-decoration: none;
-    font-size: 150%;
-    font-family: 'Red Rose', cursive;
-
-    
-}
 .liheader {
     text-align: right;
     font-size: 20px;
@@ -61,18 +40,6 @@ address{
     border-radius:70%;
 }
 
-header{
-    display: inline;
-    padding-top: 50px;
-}
-.logo{
-    float: left;
-}
-.logo img{
-    height: 50px;
-    border-radius: 60%;
-    margin: 10px;
-}
 
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}

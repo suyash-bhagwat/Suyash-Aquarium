@@ -36,3 +36,6 @@ button:hover{
     background-color: rgb(221, 220, 220);
     color: red;
 }
+.product-detail{
+    text-align: center;
+}  

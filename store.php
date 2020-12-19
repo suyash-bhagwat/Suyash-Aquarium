@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+include('dbconnect.php');
 
 ?>
 <!DOCTYPE html>
@@ -13,29 +14,9 @@ session_start();
         </style>
     </head>
     <body>
-    <header>
-            <nav class="nav">
-                <ul class="nav-ul">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="store.php">Store</a></li>
-                    <div class= 'reg'>
-                    <?php if(isset($_SESSION['uid'])){  
-                    ?>
-                    <li><button onclick="window.location='logout.php'"><b>Logout</b></li>
-                    <?php }
-                    else{
-                    ?>
-                    <li><button onclick="window.location='login.php'"><b>Login</b></li>
-                    <?php }
-                    ?>
-                    <li><button onclick="window.location='intermediate.php'"><b>Add Product</b></li>
-                    </div>
-                </ul>
-            </nav>
-            
-    </header>
-        <hr>
+    <?php
+        include("header.php");
+        ?>
         <h1 style="text-align: center;">
             Products
         </h1>   

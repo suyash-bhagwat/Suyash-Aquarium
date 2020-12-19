@@ -56,6 +56,7 @@ session_start();
             $id = $data['ID'];
 
             $_SESSION['uid'] = $id;
+
             ?>
           <script>
                 alert("You have logged in successfully");

@@ -13,7 +13,7 @@
     { 
         while($data = mysqli_fetch_assoc($run)){ 
 ?>
-    <table>
+    <table class="product-detail" >
     <tr>
         <th colspan="2">Product: <?php echo $data['Name'] ?></th>
     </tr>

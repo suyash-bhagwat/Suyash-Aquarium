@@ -7,16 +7,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-    <header>
-            <nav class="nav">
-                <ul class="nav-ul">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="store.php">Store</a></li>
-                </ul>
-            </nav>
-    </header>
-        <hr>
+    <?php
+        include("header.php");
+        ?>
         <h1>
         Here are some of the photos and videos from our Aquarium
         </h1>

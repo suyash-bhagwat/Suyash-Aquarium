@@ -38,20 +38,9 @@ function showSlides(n) {
         <style>
         </style>
     </head>
-    <body>
-        <header>
-            <nav class="nav">
-            <div class="logo">
-                <div><img src="Images\logo3.jpg"></div>
-            </div>
-                <ul class="nav-ul">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="store.php">Store</a></li>
-                </ul>
-            </nav>
-            
-        </header>
+    <body><?php
+        include("header.php");
+        ?>
         <div class="slideshow-container">
 
         <div class="mySlides fade" >

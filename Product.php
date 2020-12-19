@@ -1,3 +1,13 @@
+<?php
+session_start();
+include('dbconnect.php');
+ if(isset($_SESSION['uid'])){$id = $_SESSION['uid'] ? $_SESSION['uid'] : null;}
+ if (!empty($id)){
+     $qry = "SELECT `Role` FROM `register` WHERE ID=" . $id;
+     $run = mysqli_query($connect , $qry);
+     $data = mysqli_fetch_assoc($run);
+     if($data['Role'] == 1){
+?>
 <html lang="en">
     <head>
         <title>Accessories</title>
@@ -38,5 +48,14 @@
                 <td colspan="2"><button><b>Add</b></button></td>
             </tr>
         </table>
+
+<?php
+     }
+else
+{
+    echo 'You are not authorized to this page';
+}
+ }
+?>
 </body>
 </html>

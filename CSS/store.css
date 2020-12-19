@@ -9,22 +9,7 @@ h1{ display: block;
     font-family: 'Domine', serif;
     font-family: 'Playfair Display', serif;
 }
-.nav li{
-    display: inline; 
-    
-}
 
-.nav a{
-   
-    padding: 4em;
-    color:rgb(61, 255, 255);
-    text-decoration: none;
-    font-size: 150%;
-    font-family: 'Red Rose', cursive;
-}
-.nav-ul{
-    size: 20px;
-}
 
 .liheader {
     text-align: right;
@@ -36,7 +21,6 @@ h1{ display: block;
     text-align: end;
     block-size: auto;
 }
-
 
 header{
     display: inline;
@@ -61,16 +45,7 @@ header{
     margin-right: 30px;
 }
 
-button {
-    height: 40px;
-    width: 150px;
-    opacity: 70%;
-    font-size: 16px;
-}
 
-button:hover {
-    color: red;
-}
 
 th, td { 
     font-size: 1.2em;
@@ -110,4 +85,5 @@ h2{
 }
 .product-list{
     text-align: center;
+}
 }
