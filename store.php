@@ -1,9 +1,4 @@
-<?php
-session_start();
 
-include('dbconnect.php');
-
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,16 +28,11 @@ include('dbconnect.php');
             <li><a href="SiphonPipes.php">Siphon Pipes</a></li>
             <li><a href="Lights.php">Tube lights</a></li>  
         </ul>   
-        <div>
-    
-        <footer>
-        <div class="logos">
-                   <a href="https://www.facebook.com/Suyash-Aquarium-331498447019364/"><img src="Images\facebook.jpg"></a>
-                   <a href="https://www.instagram.com/suyash_aquarium/"><img src="Images\insta.jpg"></a>
-                   <a href="https://www.youtube.com/channel/UCFtLuGOXo9me_kopNtqMvBA"><img src="Images\Youtube.jpg"></a>
-                </div> 
-        </footer>
-
-
+        </div>
         
     </body>
+
+    <?php
+        include("Footer.php");
+        ?>
+</html>

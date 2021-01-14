@@ -72,4 +72,7 @@ table th{
     width: 350px;
     text-align: center;
 }
-
+.login-data{
+    width: 30px;
+    height: 15px;
+}

@@ -1,14 +1,14 @@
 .nav{
     top: 0;
     width: 100%;
+    display: inline;
 }
 .nav li{
     display: inline; 
 }
 
 .nav a{
-   
-    padding: 4em;
+    padding: 50px;
     color:rgb(61, 255, 255);
     text-decoration: none;
     font-size: 150%;
@@ -29,7 +29,7 @@ header{
 }
 button {
     height: 40px;
-    width: 150px;
+    width: 100px;
     opacity: 70%;
     float: right;
     font-size: 16px;
@@ -40,10 +40,26 @@ button:hover {
 }
 .main-menu{
     display: inline-block;
+    float: left;
+    margin-top: 18px;
+    font-size: 15px;
 }
 
 .header-hr{
     width: 100%;
     margin-top: 15px;
     border-top: 3px solid #fff;
+}
+.main-login{
+    padding: 0;
+    margin-top: 18px;
+    float: right;
+    font-size: 15px;
+}
+.cart{
+    margin-right: 20px;
+    font-size: 150%;
+}
+.menu-item{
+    padding-top: 10px;
 }

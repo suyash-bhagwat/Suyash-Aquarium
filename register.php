@@ -1,16 +1,19 @@
 <?php
-session_start();
+
 
 ?>
 <html lang="en">
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="CSS\Product.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src= "validate.js"></script>
     </head>
-<body>
+    <body>
+    <?php
+        include("header.php");
+        ?>
     <form action="insert.php" method="post" class="register-form">
-        <table class="register" align ="center" style="margin-top: 200px;">
+        <table class="register" align ="center" style="margin-top: 120px;" name="form">
             <th colspan="2">REGISTRATION</th>
             <tr>
                 <td>Username:</td><td><input id="uname" class="register-form--uname" type="text" name="name" required="required" placeholder='Enter Name'></td>
@@ -28,14 +31,13 @@ session_start();
                 <td>Phone Number:</td><td><input id="phone" class="register-form--phone" type="number" name="p_number" required="required" placeholder='Enter Phone number'></td>
             </tr>
             <tr>
-                <td colspan="2" align ="center"><input type="submit" name="submit" value="Create Account"></td>
+                <td colspan="2" align ="center"><input type="submit" name="submit" value="Create Account" onclick="formValidation()"></td>
             </tr>
         </table>
     </form>
 </body>
 </html>
 <?php
-
 
 
 ?>

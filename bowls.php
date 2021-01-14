@@ -1,16 +1,19 @@
 <html>
 <head>
-    <link rel="stylesheet" href="CSS\Product.css">
+<link rel="stylesheet" href="CSS\Product.css">
     <title>
-    bowls
+    Available Bowls
     </title>
 </head>
 <body>
 <?php
+        include("header.php");
+        ?>
+<?php
     include('dbconnect.php');
     $qry="SELECT * FROM `sale items` WHERE `Category`=3";
     $run = mysqli_query($connect , $qry);
-    if ($run ==  TRUE)
+    if ($run == TRUE)
     {  ?>
        <p>  <h1>Available Bowls</h1>
        </p> 
@@ -32,7 +35,7 @@
                <td><?php echo $data['AvailQuantity']?></td>
                <td>&#8377 <?php echo $data['Price']?></td>
                <td><a href='Template.php?id=<?php echo $data['Sr_No'] ?>'><button>More Info</button></a></td>
-               <td><button>ADD to Cart</button></td>
+               <td><a href='AddtoCart.php?id=<?php echo $data['Sr_No'] ?>'><button>ADD to Cart</button></a></td>
            </tr>
            <?php
        }

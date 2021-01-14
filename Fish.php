@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="CSS\basic.css">
     </head>
 <body>
+<?php
+        include("header.php");
+        ?>
     <form action="uploadf.php" method="post">
         <table  class ="add" align ="center" style="margin-top: 200px; " >
             <th colspan="2"><b>Add Fish records</b></th>

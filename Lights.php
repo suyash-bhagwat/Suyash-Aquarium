@@ -7,6 +7,9 @@
 </head>
 <body>
 <?php
+        include("header.php");
+        ?>
+<?php
     include('dbconnect.php');
     $qry="SELECT * FROM `sale items` WHERE `Category`=8";
     $run = mysqli_query($connect , $qry);
@@ -32,7 +35,7 @@
                <td><?php echo $data['AvailQuantity']?></td>
                <td>&#8377 <?php echo $data['Price']?></td>
                <td><a href='Template.php?id=<?php echo $data['Sr_No'] ?>'><button>More Info</button></a></td>
-               <td><button>ADD to Cart</button></td>
+               <td><a href='AddtoCart.php?id=<?php echo $data['Sr_No'] ?>'><button>ADD to Cart</button></a></td>
            </tr>
            <?php
        }

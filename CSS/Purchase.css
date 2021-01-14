@@ -1,0 +1,37 @@
+.total{
+   margin-left: 550px;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    margin-top: 100px;
+}
+p{
+    font-size: 25px;
+}

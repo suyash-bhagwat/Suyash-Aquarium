@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="CSS\product.css">
     </head>
 <body>
+<?php
+        include("header.php");
+        ?>
     <script>
         function analyze(input) {
                 if (input == "Fish") {

@@ -7,8 +7,6 @@ body {
 
 table{width: 500px;
     height: 500px;
-    margin-top: 150px;
-    margin-left: 520px;
     background-color: rgb(255, 255, 255);
     background-color: rgb(255, 230, 250);
     background-blend-mode: soft-light;
@@ -20,7 +18,7 @@ th {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-img{
+.cart-img img{
     width: 250px;
     height: 400px;
 }
@@ -28,9 +26,8 @@ td{
     padding-left: 10px;
     font-size: 20px;
 }
-button{
-    font-size: 20px;
-    margin-left: 35px;
+.temp-button button{
+    margin-right: 60px;
 }
 button:hover{
     background-color: rgb(221, 220, 220);

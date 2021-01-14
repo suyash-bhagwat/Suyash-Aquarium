@@ -1,0 +1,148 @@
+accessories 
+filters
+bowl
+food
+monuments(show piece)
+plastic plants
+Air machines
+Aquarium pipes
+Siphon pipes
+Aquarium Tubes
+
+
+
+Fish 
+
+
+
+
+$query = "SELECT * FROM `accesseries`";
+                 $run = mysqli_query($connect,$query);
+                 if ($run ==  TRUE)
+                 {  ?>
+                    <table style="width: 50%;" class="table1"> 
+                        <tr>
+                            <th>CODE</th>
+                            <th>NAME</th>
+                            <th>AVAILABLE QUANTITY</th>
+                            <th>PRICE</th>
+                        </tr>
+                    <?php
+                    while($data = mysqli_fetch_assoc($run)){
+                        ?>
+                        <tr>
+                            <td><?php echo $data['Item_Code'] ?></td>
+                            <td><?php echo $data['Item_Name'] ?></td>
+                            <td><?php echo $data['AvailQuantity'] ?></td>
+                            <td>&#8377 <?php echo $data['Price'] ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?></table>
+                    <?php
+                }
+                 else
+                 {
+                     echo "Something went Wrong";
+                 }
+
+#FOR FISH
+                 $query = "SELECT * FROM `fish`";
+                 $run = mysqli_query($connect,$query);
+                 if ($run ==  TRUE)
+                 {  ?>
+                    <table style="width: 50%;" class="table2"> 
+                        <tr>
+                            <th>NAME</th>
+                            <th>AVAILABLE QUANTITY</th>
+                            <th>PRICE</th>
+                        </tr>
+                    <?php
+                    while($data = mysqli_fetch_assoc($run)){
+                        ?>
+                        <tr>
+                            <td><?php echo $data['Name'] ?></td>
+                            <td><?php echo $data['AvailQuantity'] ?></td>
+                            <td>&#8377 <?php echo $data['Price'] ?></td>
+                        </tr>
+
+
+<?php
+    include('dbconnect.php');
+    $id = $_GET['id'];
+    $qry="SELECT * FROM `sale items` WHERE `Sr_No`=$id";
+    $run = mysqli_query($connect , $qry);
+    if ($run ==  TRUE)
+    { 
+        while($data = mysqli_fetch_assoc($run)){ 
+
+?>
+<html>
+    <head>
+    <link rel="stylesheet" href="CSS\cart.css">
+    <script src="cart.js" async></script>
+    </head>
+    <body>
+        <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Item</span>
+            <span class="cart-item cart-header cart-column">Price</span>
+            <span class="cart-item cart-header cart-column">Quantity</span>
+        </div>
+        <div class="cart-items">
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                <img class="cart-item-image" src="Product Images/<?php echo $data['image'] ?>" width="100" height="100">
+                    <span class="cart-item-title"> <?php echo $data['Name']?></span>
+                </div>
+                <span class="cart-price cart-column">&#8377 <?php echo $data['Price']?></span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button  class="btn btn-danger" type="button">Remove</button>
+                </div>
+            </div>
+            <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="Product Images/<?php echo $data['image'] ?>" width="100" height="100">
+                    <span class="cart-item-title"> <?php echo $data['Name']?></span>
+                </div>
+                <span class="cart-price cart-column">&#8377 <?php echo $data['Price']?></span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button  class="btn btn-danger" type="button">Remove</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">&#8377 <?php ?></span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
+        </section>
+    </body>
+<?php
+        }
+    }
+        ?>
+</html>
+
+
+
+                            <button  onclick = "Remove(<?php echo $uid ?>,<?php echo $name ?>,<?php echo $total ?>)" class="btn btn-danger" type="submit">Remove</button>
+
+    function Remove($id,$name,$total){
+        echo $id;
+        echo $name;
+        echo $total;
+        include('dbconnect.php');
+        $q = "DELETE FROM `cart` WHERE `uid` = $id AND `Name`= '$name'";
+        $r = mysqli_query($connect, $q);
+        if($r == TRUE){
+        Updatedcart($id,$total);
+        }
+                                <form method = "post"> <input type="submit" name="remove" value="Remove" onclick="Remove(<?php echo $uid ?>,<?php echo $name ?>)">
+                                </form>
+
+<button  onclick = 'Remove(<?php echo $uid ?>,<?php echo $name ?>,<?php echo $total ?>)' class="btn btn-danger" type="submit">Remove</button>

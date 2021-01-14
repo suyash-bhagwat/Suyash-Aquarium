@@ -1,12 +1,17 @@
 <?php
 session_start();
 
-
 ?>
 <html lang="en">
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="CSS\product.css">
+        <script>
+            function goBack() 
+            {
+                window.history.go(-2);
+            }
+        </script>
     </head>
 <body>
     <form action="login.php" method="post">
@@ -22,7 +27,7 @@ session_start();
                 <td colspan= "2"><a href = "register.php"><b>Haven't registerd yet?? Just click here</b></a></td>
             </tr>
             <tr>
-                <td colspan="2" align ="center"><input type="submit" name="submit" value="Login"></td>
+                <td class="login-data" colspan="2" align ="center"><input type="submit" name="submit" value="Login"></td>
             </tr>
         </table>
 </body>
@@ -45,11 +50,10 @@ session_start();
             ?>
             <script>
                 alert("Username or Password doesn't match");
-                window.open('login.php', '_self');
+                window.open('login.php','_self');
             </script>
             <?php
         }
-        
         else
         {
             $data = mysqli_fetch_assoc($run);
@@ -59,11 +63,12 @@ session_start();
 
             ?>
           <script>
-                alert("You have logged in successfully");
-                window.open('store.php', '_self');
-            </script>
+                alert("You have logged in successfully")
+                goBack();
+                </script>
             <?php
-        }
+
+    }
     }
 
 ?>

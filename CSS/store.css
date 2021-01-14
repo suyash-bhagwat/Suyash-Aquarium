@@ -1,6 +1,8 @@
 body {
     background-image: url("1.jpg");
     background-size: cover;
+    margin: 0;
+    padding: 0;
    }
 h1{ display: block;
     text-align: center;
@@ -9,8 +11,6 @@ h1{ display: block;
     font-family: 'Domine', serif;
     font-family: 'Playfair Display', serif;
 }
-
-
 .liheader {
     text-align: right;
     font-size: 20px;
@@ -70,7 +70,7 @@ td,th{
 }
 .list a{
     font-size: 1.9em;
-    color:rgb(0, 255, 55);
+    color: rgb(0, 255, 34);
     text-decoration: none;
     font-family: 'Sansita Swashed', cursive;
 }   
@@ -81,9 +81,9 @@ h2{
     color:rgb(127, 253, 253);
     font-family: 'Sansita Swashed', cursive;
     font-size: 35px;
-    text-align: center;
+    margin-left: 30px ;
 }
 .product-list{
-    text-align: center;
+  
 }
-}
+
