@@ -8,13 +8,14 @@ session_start();
 include('dbconnect.php');
 
 if(isset($_SESSION['uid'])){
-    $id = $_GET['id'];
+    $id = $_SESSION['uid'];
     $qry="SELECT * FROM `register` WHERE `ID`=$id";
     $r = mysqli_query($connect, $qry);
-    $total = $_GET['total'];
-    $d=strtotime("+ 2 days");
+    $total = $_SESSION['total'] ;
+     $d=strtotime("+ 2 days");
     if ($r ==  TRUE)
-        {while($data = mysqli_fetch_assoc($r)){   
+        {while($data = mysqli_fetch_assoc($r)){  
+            $_SESSION['username'] = $data['Name']; 
     ?><div class="total">
     <h1>
         Please Confirm the details:</h1>
@@ -29,7 +30,7 @@ if(isset($_SESSION['uid'])){
         Your order will be ready by <?php echo date("d-m-Y", $d)?>
         </h2>
         </div>
-        <button class="btn btn-primary btn-purchase" ><a href="confirm.php?total=<?php echo $total ?>&date=<?php echo date("d-m-Y", $d)?>&name=<?php echo $data['Name'] ?>&id=<?php echo $id ?>">Confrim</button></a>
+        <button class="btn btn-primary btn-purchase" ><a href="confirm.php">Confirm</button></a>
         
 <?php
 }

@@ -35,7 +35,7 @@
                <td><?php echo $data['AvailQuantity']?></td>
                <td>&#8377 <?php echo $data['Price']?></td>
                <td><a href='Template.php?id=<?php echo $data['Sr_No'] ?>'><button>More Info</button></a></td>
-               <td><a href='AddtoCart.php?id=<?php echo $data['Sr_No'] ?>'><button>ADD to Cart</button></a></td>
+               <td><a href="AddtoCart.php?id=<?php echo $data['Sr_No'] ?>"><button>ADD to Cart</button></a></td>
            </tr>
            <?php
        }
@@ -49,5 +49,11 @@
     
 
     ?>
+
+    }
+?>
+}
+    
+
     
     </body>

@@ -8,13 +8,10 @@ include('dbconnect.php');
     <head>
     <link rel="stylesheet" href="CSS\header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <script>
-            function goBack() 
-            {
-                window.history.back();
-            }
-        </script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script> 
+
     </head>
     <header>
 
@@ -26,12 +23,13 @@ include('dbconnect.php');
                 <li class="menu-item"><a href="index.php">Home</a></li>
                 <li class="menu-item"><a href="gallery.php">Gallery</a></li>
                 <li class="menu-item"><a href="store.php">Store</a></li>
+                <li class="menu-item"><a href="Aboutus.php">About</a></li>
                 </ul>
                 <ul class="main-login">
-                <?php if(isset($_SESSION['uid'])){  
+                <?php if(isset($_SESSION['uid'])){  $id = $_SESSION['uid']; 
                 ?>
                 <li class="menu-item login"><a href="logout.php">Logout</a></li>
-                <li class="menu-item cart"><a href="cart.php?id=<?php echo $_SESSION['uid'] ?>"><i class="fa fa-shopping-cart"></i></a></li>
+                <li class="menu-item cart"><a href="cart.php"><i class="fa fa-shopping-cart"></i></a></li>
                 <?php }
                 else{
                 ?>

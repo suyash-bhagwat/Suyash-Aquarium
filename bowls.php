@@ -35,7 +35,7 @@
                <td><?php echo $data['AvailQuantity']?></td>
                <td>&#8377 <?php echo $data['Price']?></td>
                <td><a href='Template.php?id=<?php echo $data['Sr_No'] ?>'><button>More Info</button></a></td>
-               <td><a href='AddtoCart.php?id=<?php echo $data['Sr_No'] ?>'><button>ADD to Cart</button></a></td>
+               <td><a href="AddtoCart.php?id=<?php echo $data['Sr_No'] ?>"><button>ADD to Cart</button></a></td>
            </tr>
            <?php
        }
@@ -49,5 +49,39 @@
     
 
     ?>
+    <script>
+    let s = [];
+    let all = [];
+    let count = 0;
+    function test(id){
+    <?php if(isset($_SESSION['uid'])){
+    ?>
+
+    var all = JSON.parse(localStorage.getItem("cart"));
+    console.log(all);
+    if(all == null) { all = []; }
+    s.push(id) ;
+    alert('Added to cart successfully...........');
+    let s1 = JSON.stringify(s);
+    localStorage.setItem("xd",s1);
+
+    all.push(s[count]);
+    localStorage.setItem("cart", JSON.stringify(all));
+    console.log(all);
+    count = count + 1;
+    <?php 
+    }
+    else{?>
+        alert("Please log in first and then add item to the cart");
+        window.open('login.php', '_self');
+        <?php 
+
+    }
+?>
+}
     
+
+    
+    </script>
+
     </body>
