@@ -6,28 +6,23 @@ session_start();
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="CSS\product.css">
-        <script>
-            function goBack() 
-            {
-                window.history.go(-2);
-            }
-        </script>
+        <script src="login.js"></script>
     </head>
 <body>
     <form action="login.php" method="post">
         <table  class ="login" align ="center" style="margin-top: 200px; " >
             <th colspan="2">LOGIN</th>
             <tr>
-                <td>Username:</td><td><input type="text" name="name" required="required" placeholder='Enter Name'></td>
+                <td>Username:</td><td><input id= "user-name" type="text" name="name" required="required" placeholder='Enter Name' onchange= "username();"></td>
             </tr>
             <tr>
-                <td>Password:</td><td><input type="password" name="password" required="required" placeholder='Password'></td>
+                <td>Password:</td><td><input  id= "user-pass" type="password" name="password" required="required" placeholder='Password' onchange = "passvalidation();"></td>
             </tr>
             <tr>
                 <td colspan= "2"><a href = "register.php"><b>Haven't registerd yet?? Just click here</b></a></td>
             </tr>
             <tr>
-                <td class="login-data" colspan="2" align ="center"><input type="submit" name="submit" value="Login"></td>
+                <td id="login-data" colspan="2" align ="center"><input onclick = "clicked()" type="submit" name="submit" value="Login" ></td>
             </tr>
         </table>
 </body>
@@ -49,8 +44,7 @@ session_start();
         {
             ?>
             <script>
-                alert("Username or Password doesn't match");
-                window.open('login.php','_self');
+                 wrong();
             </script>
             <?php
         }
@@ -58,14 +52,11 @@ session_start();
         {
             $data = mysqli_fetch_assoc($run);
             $id = $data['ID'];
-
             $_SESSION['uid'] = $id;
-
             ?>
           <script>
-                alert("You have logged in successfully")
-                goBack();
-                </script>
+                correct();
+          </script>
             <?php
 
     }

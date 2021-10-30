@@ -1,6 +1,9 @@
 <html>
 <head>
     <link rel="stylesheet" href="CSS\cart.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="cart.js"></script>
+   
 </head>
 <body>
     <a class="back" href="store.php">Previous page</a>
@@ -9,6 +12,10 @@
 
 session_start();
 
+$id = $_SESSION['uid'];
+$newid = $id ^ 20;
+$quantity =1;
+if(isset($_GET['remove'])){
 if(filter_var($_GET['remove'], FILTER_VALIDATE_BOOLEAN) == TRUE)
 {
     $name = $_GET['name'];
@@ -17,6 +24,7 @@ if(filter_var($_GET['remove'], FILTER_VALIDATE_BOOLEAN) == TRUE)
         $q = "DELETE FROM `cart` WHERE `uid` = $id AND `Name`= '$name'";
         $r = mysqli_query($connect, $q);
         if($r == TRUE){
+}
 }
 }
 
@@ -66,12 +74,15 @@ if(isset($_SESSION['uid'])){
                     <span class="cart-item cart-header cart-column">Item</span>
                     <span class="cart-item cart-header cart-column">Price</span>
                     <span class="cart-item cart-header cart-column">Quantity</span>
+                    <span class="cart-item cart-header cart-column"></span>
                 </div>
            <?php
             while($data = mysqli_fetch_assoc($run))
-            {   $name = $data['Name'];
+            {   
+                $name = $data['Name'];
                 $total = $total + $data['Price'];
                 $num = $num + 1;
+            
                 ?>
                     <div class="cart-items">
                         <div class="cart-row">
@@ -81,20 +92,31 @@ if(isset($_SESSION['uid'])){
                             </div>
                             <span class="cart-price cart-column">&#8377 <?php echo $data['Price']; ?></span>
                             <div class="cart-quantity cart-column">
-                                <input class="cart-quantity-input" type="number" value="1">
-                                <a class="remove" href="cart.php?remove=true&name=<?php echo $name ;?>">Remove</a>
+                            <select id= "selectElementID" onclick >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+
+                            </select>
+                            
+                            <a class="remove" href="cart.php?remove=true&name=<?php echo $name ;?>">Remove</a>
                             </div>
                         </div>
                     </div>
                 <?php 
             }
             ?>
+
                 <div class="cart-total">
                         <strong class="cart-total-title">Total</strong>
                         <span class="cart-total-price">&#8377 <?php echo $total ?></span>
                     </div>
-                <?php if($num >= 1) { ?>
-                    <a href="Purchase.php?total=<?php echo $total ?>&id=<?php echo $id ?>"><button class="btn btn-primary btn-purchase" type="button">Purchase</button></a>
+                <?php 
+                $_SESSION['total'] = $total ;
+                if($num >= 1) {
+                        ?>
+                    <a href="Purchase.php"><button class="btn btn-primary btn-purchase" type="button">Purchase</button></a>
                 </section>
             <?php
                 }

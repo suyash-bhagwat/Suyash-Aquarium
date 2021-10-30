@@ -1,23 +1,18 @@
 <html lang="en">
     <head>
-        <title>Login</title>
+        <title>Logout</title>
         <link rel="stylesheet" href="CSS\basic.css">
-        <script>
-            function goBack() 
-            {
-                window.history.go(-1);
-            }
-        </script>
+        <script src="logout.js"></script>
     </head>
 <?php
 session_start();
+session_unset();
 session_destroy();
 
 ?>
-<script>
-    alert('You have logged out successfully....');
-    goBack();
-</script>
+          <script>
+                logout();
+          </script>
 <?php
 
 ?>

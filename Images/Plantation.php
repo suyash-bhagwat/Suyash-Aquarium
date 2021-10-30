@@ -1,19 +1,23 @@
 <html lang="en">
     <head>
         <title>Freshwater</title>
-        <link rel="stylesheet" href="..\CSS\imgvid.css">
+        <link rel="stylesheet" type="text/css" href="..\CSS\imgvid.css">
+        <link rel="stylesheet" type="text/css" href="..\CSS\lightbox.min.css">
+        <script src="..\lightbox-plus-jquery.min.js"></script>
+
+
+        <meta charset="UTF-8">        
     </head>
     <body>
         
-    <div>
-        <img class="images" src="P1.JPG">
-        <img class="images" src="P2.JPG">
-        <img class="images" src="P3.JPG">
-        <img class="images" src="P8.png">
-        <img class="images" src="P9.png">
-        <img class="images" src="P10.png">
-        
-
+        <div class = "gallery">
+        <a href="Plant/P1 - small.jpg" data-lightbox="mygallery"><img class="images" src="Plant/P1 - small.jpg"></a> 
+        <a href="Plant/P2.jpg" data-lightbox="mygallery"><img class="images" src="Plant/P2 - small.jpg"></a> 
+        <a href="Plant/P3.jpg" data-lightbox="mygallery"><img class="images" src="Plant/P3 - small.jpg"></a> 
+        <a href="Plant/P8.png" data-lightbox="mygallery"><img class="images" src="Plant/P8 - small.png"></a> 
+        <a href="Plant/P9.png" data-lightbox="mygallery"><img class="images" src="Plant/P9 - small.png"></a> 
+        <a href="Plant/P10.png" data-lightbox="mygallery"><img class="images" src="Plant/P10 - small.png"></a> 
+    
 
     </div>
     </body>

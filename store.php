@@ -21,7 +21,6 @@
         <ul style="list-style-type:none;" class="list">
             <li><a href="filters.php">Filters</a></li>
             <li><a href="fishfood.php">Fish Foods</a></li>
-            <li><a href="bowls.php">Bowls</a></li>
             <li><a href="plasticplants.php">Plastic Plants</a></li>
             <li><a href="oxygenmachine.php">Oxygen Machines</a></li>
             <li><a href="AquariumPipe.php">Aquarium Pipes</a></li>
@@ -31,8 +30,4 @@
         </div>
         
     </body>
-
-    <?php
-        include("Footer.php");
-        ?>
 </html>

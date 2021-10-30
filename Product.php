@@ -14,7 +14,7 @@ include('dbconnect.php');
         <link rel="stylesheet" href="CSS\Product.css">
     </head>
 <body>  
-    <form action="uploadp.php" method="post" enctype="multipart/form-data">
+    <form action="uploadp.php" method="post" enctpye="multipart/form-data">
         <table  class ="add" align ="center" style="margin-top: 200px; " >
             <th colspan="2">Add Product</th>
             <tr>

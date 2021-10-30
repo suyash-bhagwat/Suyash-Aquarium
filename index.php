@@ -118,19 +118,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img style="height: 400px; width: 500px;" src="Images\F2.jpg" alt="..." >
-    </div>
-    <div class="item">
-      <img style="height: 400px; width: 500px;" src="Images\featured1.png" alt="...">
-    </div>
-    <div class="item">
-      <img style="height: 400px; width: 500px;" src="Images\F4.jpg" alt="...">
+      <img style="height: 400px; width: 500px;" src="Images\featured5.jpg" alt="..." >
     </div>
     <div class="item">
       <img style="height: 400px; width: 500px;" src="Images\featured2.png" alt="...">
     </div>
     <div class="item">
-      <img style="height: 400px; width: 500px;" src="Images\fighter_.jpg" alt="...">
+      <img style="height: 400px; width: 500px;" src="Images\featured1.png" alt="...">
+    </div>
+    <div class="item">
+      <img style="height: 400px; width: 500px;" src="Images\featured3.jpg" alt="...">
+    </div>
+    <div class="item">
+      <img style="height: 400px; width: 500px;" src="Images\featured4.jpg" alt="...">
     </div>
   </div>
 
@@ -149,21 +149,6 @@
     <div class = "container">
                 <div class = "blogs">
                     <div class = "blog-wrapper-lg">
-
-                    <div class = "blog">
-                            <img style="height: 180px; width: 492px;" src = "Images/maintainblog.jpg">
-                            <div class = "blog-content">
-                                <span class = "badge">Maintainance</span>
-                                <h3 class = "blog-title">
-                                Aquarium Maintenance 
-                                </h3>
-                                <p class = "blog-text">
-                                Everything needs maintenance. Maintaining an aquarium becomes very easy once you are well acquainted with the guidelines to follow and if you do them regularly.
-                                </p>
-                                <a href="Blog.php" class="btn">Read More</a>
-                            </div>
-                    </div>
-
 
                     <div class = "blog">
                     <img style="height: 180px; width: 492px;" src = "Images/waterblog.jpg">
@@ -206,13 +191,22 @@
                                 <a href="goldblog.php" class="btn">Read More</a>
                             </div>
                     </div>
+                    <div class = "blog">
+                            <img style="height: 180px; width: 492px;" src = "Images/maintainblog.jpg">
+                            <div class = "blog-content">
+                                <span class = "badge">Maintainance</span>
+                                <h3 class = "blog-title">
+                                Aquarium Maintenance 
+                                </h3>
+                                <p class = "blog-text">
+                                Everything needs maintenance. Maintaining an aquarium becomes very easy once you are well acquainted with the guidelines to follow and if you do them regularly.
+                                </p>
+                                <a href="Blog.php" class="btn">Read More</a>
+                            </div>
+                    </div>
               </div>
         </div>
   </div>
 </section>
-<?php
-        include("Footer.php");
-        ?>
-
 </body>
 </html>
